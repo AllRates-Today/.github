@@ -1,5 +1,7 @@
 ## Free Exchange Rate API for 160+ Currencies
 
+[![Powered by AllRatesToday](https://img.shields.io/badge/Powered%20by-AllRatesToday-orange.svg)](https://allratestoday.com)
+
 [![API Status](https://img.shields.io/badge/API-Online-brightgreen)](https://allratestoday.com) [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/AllRates-Today/exchange-rates-api/blob/main/LICENSE)
 
 **AllRatesToday** provides accurate, real-time and historical currency exchange rate data through a simple REST API. Mid-market rates updated every 60 seconds, no markup, no spread.
