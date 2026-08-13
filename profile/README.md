@@ -18,21 +18,59 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
   "https://allratestoday.com/api/v1/rates?source=USD&target=EUR,GBP,JPY"
 ```
 
-## 🏦 Official central bank & tax authority rates
+## 🏦 Central Bank Rates API
 
-The daily tables published by the ECB, the US Federal Reserve (H.10), the Bank of England, the People's Bank of China, the Reserve Bank of India, the Bank of Canada, the Central Bank of Sri Lanka and 47 more — plus HM Revenue & Customs, the US Treasury and Swiss customs (BAZG) for tax work. Served as clean JSON, CSV, XML or XLSX, with the institution's own publication date on every response and history reaching back to 1999 for some sources.
+Tax filings, customs declarations, audits, statutory accounts and invoicing rules in most countries don't ask what the market said — they require **the official rate published by the central bank** for a given date. That number is fixed, citable, and never changes after publication. This API serves those tables.
+
+**54 central banks and 3 national tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
 
 ```bash
+# The ECB's latest published table — one pair from it
 curl -H "Authorization: Bearer YOUR_API_KEY" \
-  "https://allratestoday.com/api/v1/central-bank/ecb/latest?source=USD&target=EUR"
+  "https://allratestoday.com/api/v1/central-bank/ecb/latest?source=EUR&target=USD"
 ```
 
-Pairs an institution does not print directly are computed from its own table and explicitly flagged `derived`, so an official rate is never confused with one we calculated.
+```json
+{
+  "bank": "ecb",
+  "rate_date": "2026-08-12",
+  "source": "EUR",
+  "target": "USD",
+  "rate": 1.1545,
+  "rate_type": "reference",
+  "derived": false,
+  "method": "published"
+}
+```
+
+### Endpoints
+
+| Endpoint | Returns |
+|----------|---------|
+| `/api/v1/central-banks` | Every covered source — home currency, rate types, latest date, depth of history |
+| `/api/v1/central-bank/{bank}/latest` | The bank's most recent published table — free tier included |
+| `/api/v1/central-bank/{bank}/{YYYY-MM-DD}` | The official table in force on that date |
+| `/api/v1/central-bank/{bank}/history` | Daily series for one pair over a date range |
+| `/api/v1/central-bank/{bank}/availability` | Which dates the bank actually published |
+
+Every endpoint also speaks `?format=csv`, `xml` and `xlsx` — the spreadsheet an auditor asks for, without a conversion step.
+
+### What makes it usable for compliance
+
+- **The institution's own publication date on every response**, not the date you asked for. Request a weekend or a holiday and you get the table that was legally in force, flagged with `published_on_requested_date: false`.
+- **Nothing silently invented.** Pairs a bank does not print directly are cross-computed from its own table and flagged `derived`, so an official rate is never confused with one we calculated.
+- **Deep archives**, not just the last few years: the SNB series reaches 1914, the Bank of Korea 1964, the HKMA 1981, the ECB 1999, the Central Bank of Kuwait 2008 across its full 134-currency board.
+- **One key, one quota, one bill** — central bank calls count the same as any other request, and the free tier covers latest tables.
+
+### Coverage
+
+The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 45 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
 
 Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 50 more.
 
 - Central bank coverage & per-bank docs: [allratestoday.com/central-bank-rates-api](https://allratestoday.com/central-bank-rates-api/)
 - Tax authority coverage: [allratestoday.com/tax-authority-rates-api](https://allratestoday.com/tax-authority-rates-api/)
+- How the rates are sourced and composites computed: [official rates methodology](https://allratestoday.com/official-rates-methodology/)
 
 ## 📦 Official SDKs
 
