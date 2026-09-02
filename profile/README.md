@@ -128,4 +128,4 @@ Every covered source also has a dedicated zero-dependency npm package hosted in 
 
 ## 🔗 Links
 
-[Website](https://allratestoday.com) | [API Docs](https://allratestoday.com/docs) | [API Reference](https://allratestoday.com/api-reference/) | [Central Bank Rates](https://allratestoday.com/central-bank-rates-api/) | [Tax Authority Rates](https://allratestoday.com/tax-authority-rates-api/) | [Get Free API Key](https://allratestoday.com/register) | [Status](https://allratestoday.com/status) | [Discord](https://discord.gg/7dyhYhC6)
+[Website](https://allratestoday.com) | [Exchange Rate API](https://allratestoday.com/exchange-rate-api/) | [Currency API](https://allratestoday.com/currency-api/) | [API Docs](https://allratestoday.com/docs) | [API Reference](https://allratestoday.com/api-reference/) | [Central Bank Rates](https://allratestoday.com/central-bank-rates-api/) | [Tax Authority Rates](https://allratestoday.com/tax-authority-rates-api/) | [Get Free API Key](https://allratestoday.com/register) | [Status](https://allratestoday.com/status) | [Discord](https://discord.gg/7dyhYhC6)
