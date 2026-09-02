@@ -7,22 +7,49 @@
 **AllRatesToday** serves two kinds of exchange rate, because reporting and pricing need different numbers:
 
 - **Mid-market rates** for 160+ currencies — sourced from institutional interbank market data, fetched live on every request, no markup and no spread.
-- **Official published rates** from **54 central banks and 3 national tax authorities** — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
+- **Official published rates** from **100+ central banks and tax authorities** (102 central banks, 4 tax authorities) — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
 
-## 🏁 Quick start
+## 🏁 Quick start — no key needed
 
-Every endpoint takes an API key. [Get a free one](https://allratestoday.com/register) — no credit card.
+Every central bank's latest table is open, CORS-enabled and edge-cached. No sign-up.
+
+```bash
+curl "https://allratestoday.com/api/open/central-bank/ecb?source=EUR&target=USD"
+```
+
+The same tables, with full history, are plain files on a CDN:
+
+```
+https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/ecb/latest.json
+https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/hmrc/history/2026.csv
+```
+
+→ [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 100+ institutions as daily JSON and CSV, refreshed four times a day.
+
+Real-time mid-market rates for 160+ currencies take a free API key ([get one](https://allratestoday.com/register), no credit card):
 
 ```bash
 curl -H "Authorization: Bearer YOUR_API_KEY" \
   "https://allratestoday.com/api/v1/rates?source=USD&target=EUR,GBP,JPY"
 ```
 
+## 🚀 Starter templates
+
+Click **Use this template** and you have a working app in a minute. All of them run keyless on official rates.
+
+| Template | Stack |
+|---|---|
+| [nextjs-currency-starter](https://github.com/AllRates-Today/nextjs-currency-starter) | Next.js 15 App Router, server-side key for live rates |
+| [react-currency-converter](https://github.com/AllRates-Today/react-currency-converter) | React + Vite, browser only |
+| [python-currency-cli](https://github.com/AllRates-Today/python-currency-cli) | Python 3.9+, zero dependencies, `currency convert 100 USD EUR` |
+| [google-sheets-exchange-rates](https://github.com/AllRates-Today/google-sheets-exchange-rates) | Apps Script: `=CBRATE("ecb","USD")` |
+| [central-bank-rates-demo](https://github.com/AllRates-Today/central-bank-rates-demo) | Static site on GitHub Pages using every per-bank SDK |
+
 ## 🏦 Central Bank Rates API
 
 Tax filings, customs declarations, audits, statutory accounts and invoicing rules in most countries don't ask what the market said — they require **the official rate published by the central bank** for a given date. That number is fixed, citable, and never changes after publication. This API serves those tables.
 
-**54 central banks and 3 national tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
+**102 central banks and 4 tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
 
 ```bash
 # The ECB's latest published table — one pair from it
@@ -64,9 +91,9 @@ Every endpoint also speaks `?format=csv`, `xml` and `xlsx` — the spreadsheet a
 
 ### Coverage
 
-The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 45 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
+The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 90 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
 
-Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 50 more.
+Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 100 more — plus matching PyPI packages.
 
 - Central bank coverage & per-bank docs: [allratestoday.com/central-bank-rates-api](https://allratestoday.com/central-bank-rates-api/)
 - Tax authority coverage: [allratestoday.com/tax-authority-rates-api](https://allratestoday.com/tax-authority-rates-api/)
@@ -79,12 +106,15 @@ Every covered source also has a dedicated zero-dependency npm package hosted in 
 | **JavaScript/TypeScript** | [@allratestoday/sdk](https://www.npmjs.com/package/@allratestoday/sdk) | `npm i @allratestoday/sdk` |
 | **Python** | [allratestoday](https://pypi.org/project/allratestoday/) | `pip install allratestoday` |
 | **PHP** | [allratestoday/sdk](https://packagist.org/packages/allratestoday/sdk) | `composer require allratestoday/sdk` |
+| **Go** | [allratestoday-go](https://github.com/AllRates-Today/allratestoday-go) | `go get github.com/AllRates-Today/allratestoday-go` |
 | **Rust** | [allratestoday](https://crates.io/crates/allratestoday) | `cargo add allratestoday` |
 | **React** | [react-currency-localizer-realtime](https://www.npmjs.com/package/react-currency-localizer-realtime) | `npm i react-currency-localizer-realtime` |
 
 ## 🤖 AI & MCP integrations
 
 - [**mcp-server**](https://github.com/AllRates-Today/mcp-server) — MCP server for Claude Code, Cursor, Claude Desktop, and Windsurf
+- [**central-bank-mcp**](https://github.com/AllRates-Today/central-bank-mcp) — official central-bank and tax-authority rates for AI agents, keyless
+- [**claude-code-plugin**](https://github.com/AllRates-Today/claude-code-plugin) — Claude Code plugin, no API key needed
 - [**realtime-exchange-rate-mcp**](https://github.com/AllRates-Today/realtime-exchange-rate-mcp) — Realtime FX rates MCP server
 - [**currency-agent**](https://github.com/AllRates-Today/currency-agent) — Currency agent sample built on A2A, Google ADK and MCP
 - [**allratestoday-deepseek**](https://github.com/AllRates-Today/allratestoday-deepseek) — DeepSeek function-calling tools
