@@ -6,7 +6,7 @@
 
 **AllRatesToday** serves two kinds of exchange rate, because reporting and pricing need different numbers:
 
-- **Mid-market rates** for 160+ currencies — sourced from institutional interbank market data, fetched live on every request, no markup and no spread.
+- **Mid-market rates** for 160+ currencies — fetched live on every request, no markup and no spread.
 - **Official published rates** from **100+ central banks and tax authorities** (102 central banks, 4 tax authorities) — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
 
 ## 🏁 Quick start — no key needed
