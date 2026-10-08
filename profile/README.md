@@ -7,7 +7,7 @@
 **AllRatesToday** serves two kinds of exchange rate, because reporting and pricing need different numbers:
 
 - **Mid-market rates** for 160+ currencies — fetched live on every request, no markup and no spread.
-- **Official published rates** from **100+ central banks and tax authorities** (102 central banks, 4 tax authorities) — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
+- **Official published rates** from **121 central banks and 3 tax authorities** — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
 
 ## 🏁 Quick start — no key needed
 
@@ -24,7 +24,7 @@ https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data
 https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/hmrc/history/2026.csv
 ```
 
-→ [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 100+ institutions as daily JSON and CSV, refreshed four times a day.
+→ [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 124 institutions as daily JSON and CSV, refreshed four times a day.
 
 Real-time mid-market rates for 160+ currencies take a free API key ([get one](https://allratestoday.com/register), no credit card):
 
@@ -49,7 +49,7 @@ Click **Use this template** and you have a working app in a minute. All of them 
 
 Tax filings, customs declarations, audits, statutory accounts and invoicing rules in most countries don't ask what the market said — they require **the official rate published by the central bank** for a given date. That number is fixed, citable, and never changes after publication. This API serves those tables.
 
-**102 central banks and 4 tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
+**121 central banks and 3 tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
 
 ```bash
 # The ECB's latest published table — one pair from it
@@ -91,9 +91,9 @@ Every endpoint also speaks `?format=csv`, `xml` and `xlsx` — the spreadsheet a
 
 ### Coverage
 
-The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 90 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
+The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 110 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
 
-Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 100 more — plus matching PyPI packages.
+Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 120 more.
 
 - Central bank coverage & per-bank docs: [allratestoday.com/central-bank-rates-api](https://allratestoday.com/central-bank-rates-api/)
 - Tax authority coverage: [allratestoday.com/tax-authority-rates-api](https://allratestoday.com/tax-authority-rates-api/)
