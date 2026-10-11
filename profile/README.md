@@ -25,6 +25,7 @@ https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data
 ```
 
 → [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 124 institutions as daily JSON and CSV, refreshed four times a day.
+→ [**free-exchange-rate-api**](https://github.com/AllRates-Today/free-exchange-rate-api) — every keyless endpoint in one page: open central-bank tables, Frankfurter/Fixer/exchangeratesapi/exchangerate.host drop-ins, CDN JSON, hosted MCP.
 
 Real-time mid-market rates for 160+ currencies take a free API key ([get one](https://allratestoday.com/register), no credit card):
 
