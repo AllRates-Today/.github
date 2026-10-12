@@ -119,6 +119,8 @@ Every covered source also has a dedicated zero-dependency npm package hosted in 
 - [**realtime-exchange-rate-mcp**](https://github.com/AllRates-Today/realtime-exchange-rate-mcp) — Realtime FX rates MCP server
 - [**currency-agent**](https://github.com/AllRates-Today/currency-agent) — Currency agent sample built on A2A, Google ADK and MCP
 - [**allratestoday-deepseek**](https://github.com/AllRates-Today/allratestoday-deepseek) — DeepSeek function-calling tools
+- **Agent trial keys** — `POST https://allratestoday.com/api/agent/keys` (JSON) issues a 100-call, 7-day key with no signup; MCP tool `request_trial_key`
+- [**Daily Reference Rate**](https://allratestoday.com/reference-rate/) — one fixed table per business day (16:00 London), keyless at `/api/open/reference-rate`, MCP tool `get_reference_rate`
 
 ## 🧰 Developer tools
 
