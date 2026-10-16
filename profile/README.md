@@ -77,8 +77,8 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \
 |----------|---------|
 | `/api/v1/central-banks` | Every covered source — home currency, rate types, latest date, depth of history |
 | `/api/v1/central-bank/{bank}/latest` | The bank's most recent published table — free tier included |
-| `/api/v1/central-bank/{bank}/{YYYY-MM-DD}` | The official table in force on that date |
-| `/api/v1/central-bank/{bank}/history` | Daily series for one pair over a date range |
+| `/api/v1/central-bank/{bank}/{YYYY-MM-DD}` | The official table in force on that date — paid plans |
+| `/api/v1/central-bank/{bank}/history` | Daily series for one pair over a date range — paid plans |
 | `/api/v1/central-bank/{bank}/availability` | Which dates the bank actually published |
 
 Every endpoint also speaks `?format=csv`, `xml` and `xlsx` — the spreadsheet an auditor asks for, without a conversion step.
