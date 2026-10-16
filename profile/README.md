@@ -92,7 +92,7 @@ Every endpoint also speaks `?format=csv`, `xml` and `xlsx` — the spreadsheet a
 
 ### Coverage
 
-The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 110 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
+The ECB, US Federal Reserve (H.10), Bank of England, People's Bank of China, Reserve Bank of India, Bank of Canada, Bank of Japan, Swiss National Bank, Central Bank of Sri Lanka and 112 more — with a deliberate focus on the South and Southeast Asian, African and Latin American central banks other providers skip. For tax work: HM Revenue & Customs, the US Treasury and Swiss customs (BAZG).
 
 Every covered source also has a dedicated zero-dependency npm package hosted in this org — [`ecb-exchange-rate`](https://github.com/AllRates-Today/ecb-exchange-rate), [`fed-exchange-rate`](https://github.com/AllRates-Today/fed-exchange-rate), [`cbsl-exchange-rate`](https://github.com/AllRates-Today/cbsl-exchange-rate), [`rbi-exchange-rate`](https://github.com/AllRates-Today/rbi-exchange-rate) and 120 more.
 
