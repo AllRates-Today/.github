@@ -26,4 +26,4 @@ Open an issue describing the use case and why it would be valuable.
 
 ## Questions?
 
-Join our [Discord](https://discord.gg/7dyhYhC6) or email support@allratestoday.com.
+Email support@allratestoday.com.

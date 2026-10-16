@@ -17,11 +17,11 @@ Every central bank's latest table is open, CORS-enabled and edge-cached. No sign
 curl "https://allratestoday.com/api/open/central-bank/ecb?source=EUR&target=USD"
 ```
 
-The same tables, with full history, are plain files on a CDN:
+The same tables, with full history, are plain files on GitHub:
 
 ```
-https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/ecb/latest.json
-https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/hmrc/history/2026.csv
+https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/main/data/ecb/latest.json
+https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/main/data/hmrc/history/2026.csv
 ```
 
 → [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 124 institutions as daily JSON and CSV, refreshed four times a day.
@@ -131,4 +131,4 @@ Every covered source also has a dedicated zero-dependency npm package hosted in 
 
 ## 🔗 Links
 
-[Website](https://allratestoday.com) | [Exchange Rate API](https://allratestoday.com/exchange-rate-api/) | [Currency API](https://allratestoday.com/currency-api/) | [API Docs](https://allratestoday.com/docs) | [API Reference](https://allratestoday.com/api-reference/) | [Central Bank Rates](https://allratestoday.com/central-bank-rates-api/) | [Tax Authority Rates](https://allratestoday.com/tax-authority-rates-api/) | [Get Free API Key](https://allratestoday.com/register) | [Status](https://allratestoday.com/status) | [Discord](https://discord.gg/7dyhYhC6)
+[Website](https://allratestoday.com) | [Exchange Rate API](https://allratestoday.com/exchange-rate-api/) | [Currency API](https://allratestoday.com/currency-api/) | [API Docs](https://allratestoday.com/docs) | [API Reference](https://allratestoday.com/api-reference/) | [Central Bank Rates](https://allratestoday.com/central-bank-rates-api/) | [Tax Authority Rates](https://allratestoday.com/tax-authority-rates-api/) | [Get Free API Key](https://allratestoday.com/register) | [Status](https://allratestoday.com/status)
