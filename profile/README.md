@@ -4,7 +4,7 @@
 [![API Status](https://img.shields.io/badge/API-Online-brightgreen)](https://allratestoday.com/status)
 [![License](https://img.shields.io/badge/license-MIT-blue)](https://github.com/AllRates-Today/exchange-rates-api/blob/main/LICENSE)
 
-**AllRatesToday** serves two kinds of exchange rate, because reporting and pricing need different numbers:
+**[AllRatesToday](https://allratestoday.com/)** serves two kinds of exchange rate, because reporting and pricing need different numbers:
 
 - **Mid-market rates** for 160+ currencies — fetched live on every request, no markup and no spread.
 - **Official published rates** from **121 central banks and 3 tax authorities** — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
