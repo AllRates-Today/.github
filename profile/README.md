@@ -7,7 +7,7 @@
 **[AllRatesToday](https://allratestoday.com/)** serves two kinds of exchange rate, because reporting and pricing need different numbers:
 
 - **Mid-market rates** for 160+ currencies — fetched live on every request, no markup and no spread.
-- **Official published rates** from **121 central banks and 3 tax authorities** — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
+- **Official published rates** from **[122 central banks and 4 tax authorities](https://allratestoday.com/central-bank-rates-api/institutions/)** — the fixed, citable numbers that tax filings, customs declarations, audits, and compliant invoicing require.
 
 ## 🏁 Quick start — no key needed
 
@@ -24,7 +24,7 @@ https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/mai
 https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/main/data/hmrc/history/2026.csv
 ```
 
-→ [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — 124 institutions as daily JSON and CSV, refreshed four times a day.
+→ [**central-bank-exchange-rates**](https://github.com/AllRates-Today/central-bank-exchange-rates) — [126 institutions](https://allratestoday.com/central-bank-rates-api/institutions/) as daily JSON and CSV, refreshed four times a day.
 → [**free-exchange-rate-api**](https://github.com/AllRates-Today/free-exchange-rate-api) — every keyless endpoint in one page: open central-bank tables, Frankfurter/Fixer/exchangeratesapi/exchangerate.host drop-ins, CDN JSON, hosted MCP.
 
 Real-time mid-market rates for 160+ currencies take a free API key ([get one](https://allratestoday.com/register), no credit card):
@@ -50,7 +50,7 @@ Click **Use this template** and you have a working app in a minute. All of them 
 
 Tax filings, customs declarations, audits, statutory accounts and invoicing rules in most countries don't ask what the market said — they require **the official rate published by the central bank** for a given date. That number is fixed, citable, and never changes after publication. This API serves those tables.
 
-**121 central banks and 3 tax authorities**, over **8 million published rates**, the oldest reaching back to **1914**.
+**[122 central banks and 4 tax authorities](https://allratestoday.com/central-bank-rates-api/institutions/)**, over **8 million published rates**, the oldest reaching back to **1914**.
 
 ```bash
 # The ECB's latest published table — one pair from it
